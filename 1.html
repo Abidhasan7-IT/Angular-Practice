@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js" integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>A1</title>
+</head>
+<body ng-app="myApp">
+    <div>
+        sum 1+2 = {{1+2}}
+    </div>
+
+    <div ng-controller="myName as o">
+        My name is {{o.name}} and I am {{o.age}} years old.<br>
+        I live in {{o.address}}.
+    </div>
+
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller("myName", function(){
+            this.name = "Abid Hasan";
+            this.age = 24;
+            this.address = "Dhaka, Bangladesh";
+        });
+    </script>
+</body>
+</html>
